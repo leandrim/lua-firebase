@@ -32,7 +32,7 @@ function Database:new(arg)
     end
     
     local query = tools.build_query(qry)
-    local url = string.format('https://%s.firebaseio.com%s.json?%s', session.PROJECT_ID, path, query)
+    local url = string.format('https://%s.firebasedatabase.app%s.json?%s', session.PROJECT_ID, path, query)
 
     local r, c, h, s, b = tools.request(method, url, src, true)
 
